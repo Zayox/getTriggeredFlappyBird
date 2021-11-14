@@ -1,0 +1,73 @@
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+
+#container{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../img/fb-background.png");
+  background-size: 100% 100vh;
+  background-repeat: repeat-x;
+  background-position-x: 0vw;
+  animation-name: back-move;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: initial;
+}
+
+#bird{
+  position: absolute;
+  top:50vh;
+  left:45vw;
+  height: 10vh;
+  width: 5vw;
+  transform: rotate(0deg);
+  user-select: none;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.pipe{
+  position: absolute;
+  top:0;
+  left:100vw;
+  height: 33vh;
+  width: 5vw;
+  background-image: url("../img/fb-pipe.png");
+  transform: rotate(180deg);
+  background-repeat: round round;
+  transition-duration: 0.2s;
+}
+
+
+.pipeD{
+  position: absolute;
+  bottom:0;
+  height: 40vh;
+  left:100vw;
+  width: 5vw;
+  background-image: url("../img/fb-pipe.png");
+  background-repeat: round round;
+  transition-duration: 0.2s;
+}
+
+
+@keyframes back-move {
+  0%{background-position-x: 0vw;}
+  100%{background-position-x:-100vw;}
+}
+
